@@ -12,3 +12,13 @@ Projeto para estudo do proto buffer com foco no uso com a linguagem go
 1. No terminal execute o comando `go mod init` caso o arquivo go.mod não exista
 2. Crie o arquivo com a extensão .proto na pasta proto
 3. Execute o comando `make` no terminal
+
+
+### Decode e Encode via bash
+`cat simple.bin | protoc --decode_raw`
+
+`cat simple.bin | protoc --decode=Simple simple.proto`
+
+`cat simple.bin | protoc --decode=Simple simple.proto > simple.txt`
+
+`cat simple.txt | protoc --encode=Simple simple.proto > simple.pb`

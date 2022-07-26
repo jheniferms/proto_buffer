@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package example.oneOfs;
+
+option go_package ="github.com/jheniferms/proto_buffer/proto";
+
+message Result{
+    oneof result{
+        string message = 1;
+        uint32  id = 2;
+
+    }
+}

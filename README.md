@@ -15,10 +15,18 @@ Projeto para estudo do proto buffer com foco no uso com a linguagem go
 
 
 ### Decode e Encode via bash
+
+Executar na pasta protoc os comandos abaixo:
+
+Exibi os valores pelas flags: 
 `cat simple.bin | protoc --decode_raw`
 
+Exibi os valores pela mensagem:
 `cat simple.bin | protoc --decode=Simple simple.proto`
+
+Copia a estrutura dos valores exibidos pela mensagem em um arquivo:
 
 `cat simple.bin | protoc --decode=Simple simple.proto > simple.txt`
 
+Cria um arquivo binario:
 `cat simple.txt | protoc --encode=Simple simple.proto > simple.pb`

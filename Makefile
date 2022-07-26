@@ -19,7 +19,7 @@ else
 endif
 
 build: 	generate
-	go run ./main.go
+	go run .
 
 generate:
 	protoc -I${PROTO_DIR} --go_opt=module=${PACKAGE} --go_out=. ${PROTO_DIR}/*.proto
